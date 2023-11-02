@@ -1,0 +1,77 @@
+.sellers {
+  margin: 50px auto;
+  position: relative;
+}
+
+.sellers-title {
+  margin-bottom: 50px;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+}
+
+.sellers-card {
+  text-align: center;
+}
+
+.sellers-card__top {
+  position: relative;
+  padding: 45px 45px 35px;
+  border-radius: 10px;
+  background-color: #f3f4f6;
+}
+
+.icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  right: 0;
+  bottom: -17px;
+  margin: auto;
+  color: #f3f4f6;
+}
+
+.sellers-text {
+  font-size: 15px;
+  line-height: 1.4;
+  font-family: "Rubik", sans-serif;
+  margin: 10px 0;
+}
+
+.sellers-card__bottom {
+  margin: 25px 0 15px;
+}
+
+.sellers-name {
+  margin: 5px 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sellers-job {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+}
+
+.sellers-cards__two {
+  display: none;
+}
+
+@media (max-width: 776px) {
+  .sellers-cards__one {
+    display: none;
+  }
+
+  .sellers-title {
+  margin-bottom: 30px;
+    font-size: 25px;
+  }
+
+  .sellers-cards__two {
+    display: flex;
+    text-align: center;
+  }
+}

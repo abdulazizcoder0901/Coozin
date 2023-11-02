@@ -1,0 +1,155 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  width: 10px;
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  border-radius: 20px;
+  background-color: lightseagreen;
+}
+
+.container{
+  max-width: 1200px;
+  width: 100%;
+  padding: 10px;
+  margin: auto;
+}
+
+.navbar-cards, .nav-right{
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.navbar-links{
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  font-family: "Rubik", sans-serif;
+}
+
+.navbar-links a{
+  color: #111222;
+}
+
+.nav-right .lang{
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  background-color: rgb(229, 227, 227);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+}
+
+.nav-right__btn button{
+  height: 40px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: aliceblue;
+  border: none;
+  outline: none;
+  background-color: orange;
+  transition: .3s ease;
+  font-family: "Rubik", sans-serif;
+  cursor: pointer;
+}
+
+.nav-right__btn button:hover{
+  background-color: orangered;
+}
+
+.burger-menu{
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.aside-img img:nth-child(1){
+  position: absolute;
+  width: 50px;
+  right: 0;
+}
+
+.aside-img img:nth-child(2){
+  position: absolute;
+  width: 50px;
+  top: 140%;
+  left: -5px;
+}
+
+@media (max-width:992px){
+  .navbar-cards, .nav-right, .navbar-links{
+    gap: 15px;
+  }
+
+  .aside-img img{
+    display: none;
+  }
+}
+
+@media (max-width:776px){
+  .nav-right__btn button{
+    display: none;
+  }
+
+  .navbar-links{
+    position: absolute;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    padding:70px 20px 0;
+    background-color: #111222;
+    transition: .3s linear;
+  }
+
+  .navbar-links.active{
+    left: 0%;
+  }
+  
+  .navbar-links a{
+    color: aliceblue;
+  }
+
+  .burger-menu{
+    position: relative;
+    z-index: 3;
+    display: block;
+    color: #111222;
+    cursor: pointer;
+  }
+
+  .burger-menu.active{
+    position: relative;
+    z-index: 3;
+    display: block;
+    color: aliceblue;
+    cursor: pointer;
+  }
+}
+
+@media (max-width:480px){
+  .navbar-links{
+    width: 100%;
+  }
+}
